@@ -1,5 +1,4 @@
-import './globals.css';
-import React from 'react';
+import '../styles/globals.css';
 import { siteConfig } from '../lib/siteConfig';
 
 export const metadata = {

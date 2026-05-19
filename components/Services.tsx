@@ -1,5 +1,3 @@
-import React from 'react';
-
 const services = [
   { title: 'Custom Cakes', desc: 'Personalized cakes for any theme or flavor.' },
   { title: 'Sweet Treats', desc: 'Cupcakes, tartlets and small pastries.' },
