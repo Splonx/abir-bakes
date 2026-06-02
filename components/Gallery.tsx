@@ -17,7 +17,7 @@ export default function Gallery() {
   }, [activeCategory]);
 
   return (
-    <section id="creations" className="section-pad bg-cream">
+    <section id="creations" className="section-pad bg-cream/92 backdrop-blur-[2px]">
       <div className="site-shell">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>

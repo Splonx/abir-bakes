@@ -2,7 +2,7 @@ import { experienceSteps } from '../lib/content';
 
 export default function About() {
   return (
-    <section id="experience" className="section-pad bg-ivory">
+    <section id="experience" className="section-pad bg-ivory/92 backdrop-blur-[2px]">
       <div className="site-shell">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>

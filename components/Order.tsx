@@ -29,7 +29,7 @@ export default function Order() {
   );
 
   return (
-    <section id="commande" className="section-pad bg-ivory">
+    <section id="commande" className="section-pad bg-ivory/92 backdrop-blur-[2px]">
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="lg:sticky lg:top-32">

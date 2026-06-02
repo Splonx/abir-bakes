@@ -3,7 +3,7 @@ import { siteConfig } from '../lib/siteConfig';
 
 export default function Contact() {
   return (
-    <section id="contact" className="section-pad bg-cream">
+    <section id="contact" className="section-pad bg-cream/92 backdrop-blur-[2px]">
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div>

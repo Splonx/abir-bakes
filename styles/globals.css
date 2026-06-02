@@ -69,6 +69,36 @@ textarea {
   padding-block: clamp(4.5rem, 9vw, 7.5rem);
 }
 
+.luxury-page-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.luxury-page-bg::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.2), rgba(251, 247, 239, 0.86)),
+    url('https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=1800&q=72&auto=format&fit=crop');
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.74) contrast(1.02) sepia(0.08);
+  opacity: 0.22;
+}
+
+.luxury-page-bg::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(197, 165, 107, 0.18), transparent 34%),
+    radial-gradient(circle at 18% 72%, rgba(216, 194, 179, 0.22), transparent 36%);
+  pointer-events: none;
+}
+
 .eyebrow {
   color: var(--gold);
   font-size: 0.68rem;
