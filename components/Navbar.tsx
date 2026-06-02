@@ -3,7 +3,7 @@ import { siteConfig } from '../lib/siteConfig';
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-ivory/10 bg-ink/88 text-ivory backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-cocoa/10 bg-warm/88 text-cocoa shadow-[0_12px_40px_rgba(74,52,40,0.08)] backdrop-blur-xl">
       <div className="site-shell">
         <div className="flex h-16 items-center justify-between gap-3">
           <Link href="/" className="min-w-0" aria-label="Abir Bakes accueil">
@@ -28,7 +28,7 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 rounded-full border border-ivory/12 px-3 py-2 text-xs font-bold text-ivory/72 transition hover:border-gold/60 hover:text-gold"
+              className="shrink-0 rounded-full border border-cocoa/10 bg-ivory/50 px-3 py-2 text-xs font-bold text-taupe transition hover:border-bronze/50 hover:text-cocoa"
             >
               {item.label}
             </a>

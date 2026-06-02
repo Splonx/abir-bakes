@@ -20,8 +20,8 @@ module.exports = {
         dusty: '#B9948F',
         bronze: '#A77A45',
         gold: '#C5A56B',
-        ink: '#14110F',
-        charcoal: '#2A2521'
+        ink: '#4A3428',
+        charcoal: '#5C4C43'
       },
       fontFamily: {
         elegant: ['"Cormorant Garamond"', 'serif'],

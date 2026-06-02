@@ -24,7 +24,7 @@ export default function Gallery() {
             <p className="eyebrow">Editions</p>
             <h2 className="section-heading mt-4">La piece avant tout.</h2>
           </div>
-          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-ink text-ivory sm:inline-flex">
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-gold text-cocoa sm:inline-flex">
             Demander un devis
           </a>
         </div>
@@ -39,7 +39,7 @@ export default function Gallery() {
                 onClick={() => setActiveCategory(category)}
                 className={`shrink-0 rounded-full border px-4 py-2 text-sm font-bold transition ${
                   isActive
-                    ? 'border-cocoa bg-cocoa text-ivory'
+                    ? 'border-gold bg-gold/70 text-cocoa'
                     : 'border-ink/12 bg-warm text-charcoal/70 hover:border-bronze'
                 }`}
               >
@@ -51,7 +51,7 @@ export default function Gallery() {
 
         <div className="mt-7 grid gap-5 md:grid-cols-2">
           {creations.map((creation, index) => (
-            <article key={creation.title} className="group overflow-hidden bg-warm shadow-[0_18px_60px_rgba(74,52,40,0.08)]">
+            <article key={creation.title} className="group overflow-hidden bg-warm shadow-[0_18px_60px_rgba(185,159,130,0.16)]">
               <div className="relative aspect-[0.78] overflow-hidden sm:aspect-[1.08]">
                 <Image
                   src={creation.image}

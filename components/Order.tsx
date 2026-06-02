@@ -41,11 +41,11 @@ export default function Order() {
           </div>
 
           <div className="soft-panel overflow-hidden">
-            <div className="bg-cocoa p-5 text-ivory sm:p-7">
+            <div className="bg-[linear-gradient(135deg,#EEE3D4,#D8C2B3_58%,rgba(197,165,107,0.52))] p-5 text-cocoa sm:p-7">
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gold">Progression</p>
-                  <p className="mt-2 text-sm text-ivory/68">Brief rapide pret a envoyer</p>
+                  <p className="mt-2 text-sm text-cocoa/66">Brief rapide pret a envoyer</p>
                 </div>
                 <p className="editorial text-4xl font-bold text-gold">{estimate} MAD</p>
               </div>
@@ -82,7 +82,7 @@ export default function Order() {
                 href={`${siteConfig.whatsapp}?text=${message}`}
                 target="_blank"
                 rel="noreferrer"
-                className="premium-button w-full bg-cocoa text-ivory"
+                className="premium-button w-full bg-gold text-cocoa"
               >
                 Envoyer le brief
               </a>
@@ -118,7 +118,7 @@ function ChoiceGroup({
               onClick={() => onSelect(item)}
               className={`min-h-[58px] rounded-[1.15rem] border px-4 py-3 text-left text-sm font-extrabold transition ${
                 isActive
-                  ? 'border-cocoa bg-cocoa text-ivory shadow-[0_12px_32px_rgba(74,52,40,0.16)]'
+                  ? 'border-gold bg-gold/70 text-cocoa shadow-[0_12px_32px_rgba(185,159,130,0.2)]'
                   : 'border-cocoa/10 bg-warm text-charcoal/72 hover:border-bronze'
               }`}
             >

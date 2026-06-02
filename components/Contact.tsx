@@ -14,8 +14,8 @@ export default function Contact() {
             </p>
 
             <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button bg-cocoa text-ivory">
-                WhatsApp 0659573804
+              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button bg-gold text-cocoa">
+                WhatsApp
               </a>
               <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-cocoa/14 text-cocoa">
                 Instagram
