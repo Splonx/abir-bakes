@@ -5,7 +5,7 @@ export const siteConfig = {
     'Abir Bakes cree des gateaux personnalises, experiences evenementielles et commandes premium pour anniversaires, mariages, baby showers et entreprises au Maroc.',
   slogan: 'Luxury Modern Bakery',
   instagram: 'https://www.instagram.com/abir.bakes/',
-  whatsapp: 'https://wa.me/0000000000',
+  whatsapp: 'https://wa.me/212659573804',
   email: 'hello@abirbakes.ma',
   owner: 'Abir Bakes',
   city: 'Maroc',
