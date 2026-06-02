@@ -4,14 +4,18 @@
 
 :root {
   --ivory: #fbf7ef;
-  --porcelain: #f1e9dc;
-  --cream: #fffdf8;
-  --champagne: #d9c08d;
-  --gold: #ad8545;
-  --ink: #15120f;
-  --charcoal: #2b2620;
-  --rose: #cfa6a0;
-  --sage: #78836d;
+  --warm: #fffdf8;
+  --cashmere: #eee3d4;
+  --beige: #e4d5c1;
+  --latte: #b99f82;
+  --cocoa: #4a3428;
+  --taupe: #76675b;
+  --nude: #d8c2b3;
+  --dusty: #b9948f;
+  --bronze: #a77a45;
+  --gold: #c5a56b;
+  --ink: #14110f;
+  --charcoal: #2a2521;
 }
 
 * {
@@ -25,7 +29,9 @@ html {
 body {
   min-height: 100vh;
   overflow-x: hidden;
-  background: var(--ivory);
+  background:
+    linear-gradient(180deg, rgba(255, 253, 248, 0.9), rgba(251, 247, 239, 1) 36%),
+    var(--ivory);
   color: var(--ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -35,7 +41,7 @@ img {
 }
 
 ::selection {
-  background: var(--champagne);
+  background: var(--gold);
   color: var(--ink);
 }
 
@@ -93,7 +99,7 @@ textarea {
 .body-copy {
   font-size: 1rem;
   line-height: 1.75;
-  color: rgba(43, 38, 32, 0.74);
+  color: rgba(42, 37, 33, 0.72);
 }
 
 .premium-button {
@@ -116,17 +122,17 @@ textarea {
 }
 
 .hairline {
-  border-color: rgba(21, 18, 15, 0.12);
+  border-color: rgba(20, 17, 15, 0.12);
 }
 
 .soft-panel {
-  border: 1px solid rgba(21, 18, 15, 0.1);
+  border: 1px solid rgba(20, 17, 15, 0.09);
   background: rgba(255, 253, 248, 0.78);
-  box-shadow: 0 24px 80px rgba(21, 18, 15, 0.08);
+  box-shadow: 0 24px 80px rgba(74, 52, 40, 0.08);
 }
 
 .image-treatment {
-  filter: saturate(0.92) contrast(1.04);
+  filter: saturate(0.82) contrast(1.06) sepia(0.04);
 }
 
 .hero-copy {

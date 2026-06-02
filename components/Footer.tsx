@@ -9,14 +9,14 @@ export default function Footer() {
             <div>
               <p className="editorial text-4xl font-bold leading-none">{siteConfig.name}</p>
               <p className="mt-3 max-w-md text-sm leading-7 text-ivory/62">
-                Gateaux personnalises, sweet tables et moments premium sur reservation.
+                Pieces sur mesure, textures fines et compositions preparees sur reservation.
               </p>
             </div>
             <div className="grid gap-3 text-sm font-bold text-ivory/72 sm:text-right">
-              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-champagne">
+              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-gold">
                 Instagram
               </a>
-              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-champagne">
+              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-gold">
                 WhatsApp 0659573804
               </a>
               <span>Maroc · Sur reservation</span>
@@ -33,7 +33,7 @@ export default function Footer() {
           <a href="#creations" className="premium-button min-h-[48px] border border-ink/12 text-ink">
             Creations
           </a>
-          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button min-h-[48px] bg-ink px-5 text-ivory">
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button min-h-[48px] bg-cocoa px-5 text-ivory">
             WhatsApp
           </a>
         </div>

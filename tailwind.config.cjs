@@ -8,15 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ivory: '#FBF8F1',
+        ivory: '#FBF7EF',
+        warm: '#FFFDF8',
         cream: '#FFFDF8',
-        porcelain: '#F4EFE5',
-        champagne: '#D8BF87',
-        gold: '#B08A4A',
-        ink: '#171411',
-        charcoal: '#2A2621',
-        rose: '#CFA7A0',
-        sage: '#7F8A72'
+        cashmere: '#EEE3D4',
+        beige: '#E4D5C1',
+        latte: '#B99F82',
+        cocoa: '#4A3428',
+        taupe: '#76675B',
+        nude: '#D8C2B3',
+        dusty: '#B9948F',
+        bronze: '#A77A45',
+        gold: '#C5A56B',
+        ink: '#14110F',
+        charcoal: '#2A2521'
       },
       fontFamily: {
         elegant: ['"Cormorant Garamond"', 'serif'],

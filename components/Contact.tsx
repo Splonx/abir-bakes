@@ -7,17 +7,17 @@ export default function Contact() {
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div>
-            <p className="eyebrow">Contact rapide</p>
-            <h2 className="section-heading mt-4">Votre date approche?</h2>
+            <p className="eyebrow">Contact</p>
+            <h2 className="section-heading mt-4">Preciser une intention.</h2>
             <p className="body-copy mt-5 max-w-lg">
-              Envoyez un brief court. Abir affine la creation, le prix et la disponibilite.
+              Envoyez le contexte, une reference et la date souhaitee. Abir affine la proposition et la disponibilite.
             </p>
 
             <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
-              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button bg-ink text-ivory">
+              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button bg-cocoa text-ivory">
                 WhatsApp 0659573804
               </a>
-              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-ink/14 text-ink">
+              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-cocoa/14 text-cocoa">
                 Instagram
               </a>
             </div>
@@ -27,7 +27,7 @@ export default function Contact() {
             <h3 className="editorial text-4xl font-bold leading-none">Brief parfait</h3>
             <div className="mt-6 grid grid-cols-2 gap-2">
               {briefFields.map((field) => (
-                <div key={field} className="rounded-[1rem] border border-ink/10 bg-ivory px-4 py-3 text-sm font-bold text-charcoal/74">
+                <div key={field} className="rounded-[1rem] border border-cocoa/10 bg-warm px-4 py-3 text-sm font-bold text-charcoal/74">
                   {field}
                 </div>
               ))}

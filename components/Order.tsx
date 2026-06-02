@@ -3,16 +3,16 @@
 import { useMemo, useState } from 'react';
 import { siteConfig } from '../lib/siteConfig';
 
-const occasions = ['Birthday', 'Wedding', 'Baby shower', 'Corporate'];
+const occasions = ['Celebration', 'Ceremony', 'Reception', 'Maison'];
 const portions = [
   { label: '8 parts', price: 420 },
   { label: '16 parts', price: 680 },
   { label: '30 parts', price: 1120 }
 ];
 const finishes = [
-  { label: 'Chic', price: 120 },
-  { label: 'Floral', price: 260 },
-  { label: 'Theme', price: 420 }
+  { label: 'Pure', price: 120 },
+  { label: 'Botanical', price: 260 },
+  { label: 'Signature', price: 420 }
 ];
 
 export default function Order() {
@@ -33,25 +33,25 @@ export default function Order() {
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="lg:sticky lg:top-32">
-            <p className="eyebrow">Commande</p>
-            <h2 className="section-heading mt-4">Un devis en trois gestes.</h2>
+            <p className="eyebrow">Devis</p>
+            <h2 className="section-heading mt-4">Un brief clair, une piece juste.</h2>
             <p className="body-copy mt-5 max-w-md">
-              Le tunnel reste volontairement simple: choisir le contexte, estimer, puis envoyer le brief sur WhatsApp.
+              Le parcours reste volontairement simple: contexte, format, finition. Le reste se precise avec l atelier.
             </p>
           </div>
 
           <div className="soft-panel overflow-hidden">
-            <div className="bg-ink p-5 text-ivory sm:p-7">
+            <div className="bg-cocoa p-5 text-ivory sm:p-7">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-champagne">Progression</p>
+                  <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gold">Progression</p>
                   <p className="mt-2 text-sm text-ivory/68">Brief rapide pret a envoyer</p>
                 </div>
-                <p className="editorial text-4xl font-bold text-champagne">{estimate} MAD</p>
+                <p className="editorial text-4xl font-bold text-gold">{estimate} MAD</p>
               </div>
               <div className="mt-5 grid grid-cols-3 gap-2">
                 {['Evenement', 'Format', 'Finition'].map((step) => (
-                  <div key={step} className="h-1 rounded-full bg-champagne" aria-label={step} />
+                  <div key={step} className="h-1 rounded-full bg-gold" aria-label={step} />
                 ))}
               </div>
             </div>
@@ -71,10 +71,10 @@ export default function Order() {
                 onSelect={(item) => setFinishIndex(finishes.findIndex((finish) => finish.label === item))}
               />
 
-              <div className="rounded-[1.25rem] border border-ink/10 bg-porcelain/70 p-5">
-                <p className="text-sm font-bold uppercase tracking-[0.14em] text-gold">A ajouter dans WhatsApp</p>
+              <div className="rounded-[1.25rem] border border-cocoa/10 bg-cashmere/70 p-5">
+                <p className="text-sm font-bold uppercase tracking-[0.14em] text-bronze">A ajouter dans WhatsApp</p>
                 <p className="mt-3 text-sm leading-7 text-charcoal/72">
-                  Date, ville, photo inspiration, texte sur le gateau et contraintes de livraison.
+                  Date, lieu, reference visuelle, inscription souhaitee et contraintes de remise.
                 </p>
               </div>
 
@@ -82,9 +82,9 @@ export default function Order() {
                 href={`${siteConfig.whatsapp}?text=${message}`}
                 target="_blank"
                 rel="noreferrer"
-                className="premium-button w-full bg-ink text-ivory"
+                className="premium-button w-full bg-cocoa text-ivory"
               >
-                Envoyer le brief WhatsApp
+                Envoyer le brief
               </a>
             </div>
           </div>
@@ -118,8 +118,8 @@ function ChoiceGroup({
               onClick={() => onSelect(item)}
               className={`min-h-[58px] rounded-[1.15rem] border px-4 py-3 text-left text-sm font-extrabold transition ${
                 isActive
-                  ? 'border-ink bg-ink text-ivory shadow-[0_12px_32px_rgba(21,18,15,0.16)]'
-                  : 'border-ink/10 bg-cream text-charcoal/72 hover:border-gold'
+                  ? 'border-cocoa bg-cocoa text-ivory shadow-[0_12px_32px_rgba(74,52,40,0.16)]'
+                  : 'border-cocoa/10 bg-warm text-charcoal/72 hover:border-bronze'
               }`}
             >
               {item}

@@ -1,9 +1,9 @@
 export const siteConfig = {
   name: 'Abir Bakes',
-  title: 'Abir Bakes | Patisserie personnalisee premium au Maroc',
+  title: 'Abir Bakes | Maison de creation patissiere au Maroc',
   description:
-    'Abir Bakes cree des gateaux personnalises, experiences evenementielles et commandes premium pour anniversaires, mariages, baby showers et entreprises au Maroc.',
-  slogan: 'Luxury Modern Bakery',
+    'Abir Bakes compose des pieces patissieres sur mesure, avec textures fines, details precis et direction creative pour receptions et moments prives au Maroc.',
+  slogan: 'Atelier contemporain',
   instagram: 'https://www.instagram.com/abir.bakes/',
   whatsapp: 'https://wa.me/212659573804',
   email: 'hello@abirbakes.ma',

@@ -7,8 +7,8 @@ export default function Services() {
     <section className="section-pad bg-ink text-ivory">
       <div className="site-shell">
         <div className="max-w-2xl">
-          <p className="eyebrow text-champagne">Galerie</p>
-          <h2 className="section-heading mt-4 text-ivory">Des details qui changent toute la table.</h2>
+          <p className="eyebrow text-gold">Matieres</p>
+          <h2 className="section-heading mt-4 text-ivory">Textures, lignes, finitions.</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
@@ -34,7 +34,7 @@ export default function Services() {
 
         <div className="mt-8 flex flex-col gap-3 border-t border-ivory/14 pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm leading-7 text-ivory/68">
-            Chaque photo doit guider le client vers une inspiration claire: format, finition, couleurs et niveau de detail.
+            Le visuel reste central: creme, cocoa, ivoire, reliefs et finitions doivent parler avant le discours.
           </p>
           <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-ivory/24 text-ivory">
             Voir Instagram
