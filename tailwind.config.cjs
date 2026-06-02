@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         ivory: '#FBF8F1',
+        cream: '#FFFDF8',
         porcelain: '#F4EFE5',
         champagne: '#D8BF87',
         gold: '#B08A4A',

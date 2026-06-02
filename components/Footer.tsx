@@ -2,24 +2,42 @@ import { siteConfig } from '../lib/siteConfig';
 
 export default function Footer() {
   return (
-    <footer className="bg-ink py-10 text-ivory">
-      <div className="site-shell flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-        <div>
-          <p className="font-elegant text-4xl font-bold">{siteConfig.name}</p>
-          <p className="mt-2 max-w-md text-sm leading-6 text-ivory/62">
-            Patisserie personnalisee premium, concue pour devenir la reference digitale des experiences sucrees au Maroc.
-          </p>
+    <>
+      <footer className="bg-ink pb-28 pt-10 text-ivory sm:pb-10">
+        <div className="site-shell">
+          <div className="grid gap-8 sm:grid-cols-[1fr_auto] sm:items-end">
+            <div>
+              <p className="editorial text-4xl font-bold leading-none">{siteConfig.name}</p>
+              <p className="mt-3 max-w-md text-sm leading-7 text-ivory/62">
+                Gateaux personnalises, sweet tables et moments premium sur reservation.
+              </p>
+            </div>
+            <div className="grid gap-3 text-sm font-bold text-ivory/72 sm:text-right">
+              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-champagne">
+                Instagram
+              </a>
+              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-champagne">
+                WhatsApp 0659573804
+              </a>
+              <span>Maroc · Sur reservation</span>
+            </div>
+          </div>
+          <div className="mt-8 border-t border-ivory/12 pt-5 text-xs font-bold uppercase tracking-[0.16em] text-ivory/42">
+            © {new Date().getFullYear()} {siteConfig.owner}
+          </div>
         </div>
-        <div className="flex flex-wrap gap-4 text-sm font-semibold text-ivory/68">
-          <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-champagne">
-            Instagram
+      </footer>
+
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-ink/10 bg-ivory/94 p-3 shadow-[0_-18px_50px_rgba(21,18,15,0.14)] backdrop-blur-xl sm:hidden">
+        <div className="grid grid-cols-[1fr_auto] gap-2">
+          <a href="#creations" className="premium-button min-h-[48px] border border-ink/12 text-ink">
+            Creations
           </a>
-          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-champagne">
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button min-h-[48px] bg-ink px-5 text-ivory">
             WhatsApp
           </a>
-          <span>© {new Date().getFullYear()} {siteConfig.owner}</span>
         </div>
       </div>
-    </footer>
+    </>
   );
 }

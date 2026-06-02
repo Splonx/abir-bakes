@@ -2,31 +2,24 @@ import { experienceSteps } from '../lib/content';
 
 export default function About() {
   return (
-    <section id="experience" className="bg-ivory py-20 sm:py-28">
+    <section id="experience" className="section-pad bg-ivory">
       <div className="site-shell">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
-            <p className="eyebrow">Vision produit</p>
-            <h2 className="section-heading mt-4 text-ink">
-              D une patisserie artisanale a une plateforme d experiences.
-            </h2>
+            <p className="eyebrow">Experience</p>
+            <h2 className="section-heading mt-4">Un gateau. Un moment. Une mise en scene.</h2>
           </div>
-          <div className="space-y-5 text-base leading-8 text-charcoal/78">
-            <p>
-              Abir Bakes ne doit pas etre pense comme une boutique de gateaux. Le produit doit aider un client a preparer un moment: anniversaire, mariage, baby shower, fiancailles, corporate ou table privee.
-            </p>
-            <p>
-              La nouvelle structure pose les fondations: decouverte des creations, personnalisation, devis, suivi, production interne, CRM et extension marketplace pour plusieurs patissiers premium au Maroc.
-            </p>
-          </div>
+          <p className="body-copy max-w-xl lg:ml-auto">
+            Abir Bakes accompagne le client comme une maison creative: moins de friction, plus de clarte, une commande qui ressemble a un brief d evenement.
+          </p>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-3 sm:grid-cols-3">
           {experienceSteps.map((step) => (
-            <article key={step.label} className="border-t border-ink/16 pt-6">
-              <span className="font-elegant text-4xl font-bold text-gold">{step.label}</span>
-              <h3 className="mt-5 text-xl font-bold text-ink">{step.title}</h3>
-              <p className="mt-3 leading-7 text-charcoal/70">{step.text}</p>
+            <article key={step.label} className="soft-panel p-5 sm:p-6">
+              <p className="editorial text-4xl font-bold text-gold">{step.label}</p>
+              <h3 className="mt-5 text-2xl font-bold tracking-tight">{step.title}</h3>
+              <p className="mt-3 text-[0.95rem] leading-7 text-charcoal/68">{step.text}</p>
             </article>
           ))}
         </div>

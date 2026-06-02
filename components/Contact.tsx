@@ -1,65 +1,46 @@
-import { testimonials } from '../lib/content';
+import { briefFields } from '../lib/content';
 import { siteConfig } from '../lib/siteConfig';
 
 export default function Contact() {
   return (
-    <section className="bg-porcelain py-20 sm:py-28">
+    <section id="contact" className="section-pad bg-cream">
       <div className="site-shell">
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div>
-            <p className="eyebrow">Devis sur mesure</p>
-            <h2 className="section-heading mt-4 text-ink">Lancez le brief, Abir affine la creation.</h2>
-            <p className="mt-6 leading-8 text-charcoal/72">
-              Pour un vrai devis, il faut une date, une ville, le nombre d invites, une inspiration visuelle et le niveau de finition souhaite. La prochaine version pourra gerer upload, paiement, compte client et suivi.
+            <p className="eyebrow">Contact rapide</p>
+            <h2 className="section-heading mt-4">Votre date approche?</h2>
+            <p className="body-copy mt-5 max-w-lg">
+              Envoyez un brief court. Abir affine la creation, le prix et la disponibilite.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
               <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button bg-ink text-ivory">
-                WhatsApp
+                WhatsApp 0659573804
               </a>
-              <a
-                href={siteConfig.instagram}
-                target="_blank"
-                rel="noreferrer"
-                className="premium-button border border-ink/18 text-ink"
-              >
+              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-ink/14 text-ink">
                 Instagram
               </a>
             </div>
-
-            <div className="mt-10 grid gap-4">
-              {testimonials.map((testimonial) => (
-                <blockquote key={testimonial.author} className="border-l-2 border-gold pl-5">
-                  <p className="font-elegant text-2xl font-bold leading-8 text-ink">"{testimonial.quote}"</p>
-                  <cite className="mt-3 block text-sm font-bold uppercase not-italic tracking-[0.16em] text-charcoal/50">
-                    {testimonial.author}
-                  </cite>
-                </blockquote>
-              ))}
-            </div>
           </div>
 
-          <div className="glass-line p-5 sm:p-7">
-            <h3 className="font-elegant text-4xl font-bold text-ink">Brief ideal</h3>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[
-                'Type d evenement',
-                'Date et ville',
-                'Nombre d invites',
-                'Theme ou inspiration',
-                'Saveurs preferees',
-                'Budget cible'
-              ].map((item) => (
-                <div key={item} className="border border-ink/10 bg-white/55 p-4">
-                  <p className="text-sm font-bold text-ink">{item}</p>
-                  <p className="mt-2 text-sm leading-6 text-charcoal/58">A renseigner dans le message de devis.</p>
+          <div className="soft-panel p-5 sm:p-7">
+            <h3 className="editorial text-4xl font-bold leading-none">Brief parfait</h3>
+            <div className="mt-6 grid grid-cols-2 gap-2">
+              {briefFields.map((field) => (
+                <div key={field} className="rounded-[1rem] border border-ink/10 bg-ivory px-4 py-3 text-sm font-bold text-charcoal/74">
+                  {field}
                 </div>
               ))}
             </div>
-            <div className="mt-6 border-t border-ink/10 pt-6">
-              <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold">Roadmap produit</p>
-              <p className="mt-3 leading-7 text-charcoal/72">
-                Upload inspiration, devis automatique, acompte, planning production, page souvenir et relances anniversaire.
+            <div className="mt-7 grid gap-4 border-t border-ink/10 pt-6 text-sm leading-7 text-charcoal/70">
+              <p>
+                <strong className="text-ink">Localisation:</strong> Maroc
+              </p>
+              <p>
+                <strong className="text-ink">Horaires:</strong> commandes sur reservation
+              </p>
+              <p>
+                <strong className="text-ink">Delai conseille:</strong> 48h minimum
               </p>
             </div>
           </div>

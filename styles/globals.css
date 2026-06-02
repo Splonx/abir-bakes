@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --ivory: #fbf8f1;
-  --porcelain: #f4efe5;
-  --champagne: #d8bf87;
-  --gold: #b08a4a;
-  --ink: #171411;
-  --charcoal: #2a2621;
-  --rose: #cfa7a0;
-  --sage: #7f8a72;
+  --ivory: #fbf7ef;
+  --porcelain: #f1e9dc;
+  --cream: #fffdf8;
+  --champagne: #d9c08d;
+  --gold: #ad8545;
+  --ink: #15120f;
+  --charcoal: #2b2620;
+  --rose: #cfa6a0;
+  --sage: #78836d;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html {
@@ -19,15 +24,17 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background:
-    linear-gradient(90deg, rgba(23, 20, 17, 0.035) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(23, 20, 17, 0.025) 1px, transparent 1px),
-    var(--ivory);
-  background-size: 56px 56px;
+  overflow-x: hidden;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
-body::selection {
+img {
+  max-width: 100%;
+}
+
+::selection {
   background: var(--champagne);
   color: var(--ink);
 }
@@ -41,53 +48,110 @@ textarea {
 }
 
 .site-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(100% - 28px, 1180px);
   margin-inline: auto;
+}
+
+@media (min-width: 640px) {
+  .site-shell {
+    width: min(100% - 56px, 1180px);
+  }
+}
+
+.section-pad {
+  padding-block: clamp(4.5rem, 9vw, 7.5rem);
 }
 
 .eyebrow {
   color: var(--gold);
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
 }
 
+.display-title,
+.section-heading,
+.editorial {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
 .display-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(4.1rem, 18vw, 11rem);
   font-weight: 700;
-  line-height: 0.96;
+  letter-spacing: 0;
+  line-height: 0.82;
 }
 
 .section-heading {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(2.35rem, 5vw, 4.5rem);
+  font-size: clamp(2.45rem, 10vw, 5.5rem);
   font-weight: 700;
-  line-height: 1;
+  letter-spacing: 0;
+  line-height: 0.9;
+}
+
+.body-copy {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(43, 38, 32, 0.74);
 }
 
 .premium-button {
   display: inline-flex;
-  min-height: 46px;
+  min-height: 52px;
   align-items: center;
   justify-content: center;
   border-radius: 999px;
   padding: 0 1.25rem;
-  font-size: 0.88rem;
-  font-weight: 700;
-  transition: transform 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  white-space: nowrap;
 }
 
 .premium-button:hover {
   transform: translateY(-1px);
 }
 
-.glass-line {
-  border: 1px solid rgba(23, 20, 17, 0.1);
-  background: rgba(251, 248, 241, 0.78);
-  backdrop-filter: blur(18px);
+.hairline {
+  border-color: rgba(21, 18, 15, 0.12);
+}
+
+.soft-panel {
+  border: 1px solid rgba(21, 18, 15, 0.1);
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: 0 24px 80px rgba(21, 18, 15, 0.08);
 }
 
 .image-treatment {
-  filter: saturate(0.9) contrast(1.03);
+  filter: saturate(0.92) contrast(1.04);
+}
+
+.hero-copy {
+  animation: hero-reveal 700ms ease-out both;
+}
+
+@keyframes hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

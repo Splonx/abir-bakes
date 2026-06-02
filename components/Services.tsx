@@ -1,36 +1,44 @@
-import { eventTypes, platformModules } from '../lib/content';
+import Image from 'next/image';
+import { galleryImages } from '../lib/content';
+import { siteConfig } from '../lib/siteConfig';
 
 export default function Services() {
   return (
-    <section className="bg-ink py-20 text-ivory sm:py-28">
+    <section className="section-pad bg-ink text-ivory">
       <div className="site-shell">
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="eyebrow">Ecosysteme evenementiel</p>
-            <h2 className="section-heading mt-4 text-ivory">La commande devient un moment pilote.</h2>
-            <p className="mt-6 max-w-xl leading-8 text-ivory/70">
-              Le front office doit aider le client a penser l evenement complet, pendant que l architecture prepare deja production, CRM, analytics et automatisations.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {eventTypes.map((event) => (
-                <span
-                  key={event}
-                  className="rounded-full border border-ivory/18 px-4 py-2 text-sm font-semibold text-ivory/78"
-                >
-                  {event}
-                </span>
-              ))}
-            </div>
-          </div>
+        <div className="max-w-2xl">
+          <p className="eyebrow text-champagne">Galerie</p>
+          <h2 className="section-heading mt-4 text-ivory">Des details qui changent toute la table.</h2>
+        </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {platformModules.map((module) => (
-              <article key={module.title} className="border border-ivory/12 bg-ivory/[0.04] p-6">
-                <h3 className="font-elegant text-3xl font-bold text-champagne">{module.title}</h3>
-                <p className="mt-4 leading-7 text-ivory/68">{module.text}</p>
-              </article>
-            ))}
-          </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+          {galleryImages.map((image, index) => (
+            <div
+              key={image.src}
+              className={`relative overflow-hidden bg-ivory/8 ${
+                index === 0 ? 'col-span-2 aspect-[1.1] sm:aspect-[0.74]' : 'aspect-[0.74]'
+              }`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                loading="lazy"
+                quality={72}
+                sizes="(min-width: 640px) 25vw, 50vw"
+                className="object-cover image-treatment"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 flex flex-col gap-3 border-t border-ivory/14 pt-7 sm:flex-row sm:items-center sm:justify-between">
+          <p className="max-w-xl text-sm leading-7 text-ivory/68">
+            Chaque photo doit guider le client vers une inspiration claire: format, finition, couleurs et niveau de detail.
+          </p>
+          <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-ivory/24 text-ivory">
+            Voir Instagram
+          </a>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export const siteConfig = {
   navItems: [
     { label: 'Creations', href: '#creations' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Designer IA', href: '#designer' },
-    { label: 'Commande', href: '#commande' }
+    { label: 'Devis', href: '#commande' },
+    { label: 'Contact', href: '#contact' }
   ]
 };

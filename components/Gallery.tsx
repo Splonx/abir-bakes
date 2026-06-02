@@ -1,47 +1,86 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { featuredCreations } from '../lib/content';
+import Image from 'next/image';
+import { useMemo, useState } from 'react';
+import { categories, featuredCreations } from '../lib/content';
+import { siteConfig } from '../lib/siteConfig';
 
 export default function Gallery() {
+  const [activeCategory, setActiveCategory] = useState('Tous');
+
+  const creations = useMemo(() => {
+    if (activeCategory === 'Tous') {
+      return featuredCreations;
+    }
+
+    return featuredCreations.filter((creation) => creation.category === activeCategory);
+  }, [activeCategory]);
+
   return (
-    <section id="creations" className="bg-porcelain py-20 sm:py-28">
+    <section id="creations" className="section-pad bg-cream">
       <div className="site-shell">
-        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl">
-            <p className="eyebrow">Creations signature</p>
-            <h2 className="section-heading mt-4 text-ink">Un catalogue pense par evenement.</h2>
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="eyebrow">Catalogue</p>
+            <h2 className="section-heading mt-4">Creations qui signent la table.</h2>
           </div>
-          <p className="max-w-md leading-7 text-charcoal/70">
-            Chaque creation devient une entree vers un parcours: inspiration, brief, prix estime, production et souvenir partageable.
-          </p>
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-ink text-ivory sm:inline-flex">
+            Demander un devis
+          </a>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
-          {featuredCreations.map((creation, index) => (
-            <motion.article
-              key={creation.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.55, delay: index * 0.06 }}
-              className="group overflow-hidden border border-ink/10 bg-ivory"
-            >
-              <div className="aspect-[1.25] overflow-hidden">
-                <img
+        <div className="-mx-3 mt-8 flex gap-2 overflow-x-auto px-3 pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          {categories.map((category) => {
+            const isActive = activeCategory === category;
+            return (
+              <button
+                key={category}
+                type="button"
+                onClick={() => setActiveCategory(category)}
+                className={`shrink-0 rounded-full border px-4 py-2 text-sm font-bold transition ${
+                  isActive
+                    ? 'border-ink bg-ink text-ivory'
+                    : 'border-ink/12 bg-ivory text-charcoal/70 hover:border-gold'
+                }`}
+              >
+                {category}
+              </button>
+            );
+          })}
+        </div>
+
+        <div className="mt-7 grid gap-5 md:grid-cols-2">
+          {creations.map((creation, index) => (
+            <article key={creation.title} className="group overflow-hidden bg-ivory shadow-[0_18px_60px_rgba(21,18,15,0.08)]">
+              <div className="relative aspect-[0.78] overflow-hidden sm:aspect-[1.08]">
+                <Image
                   src={creation.image}
-                  alt={creation.title}
-                  className="h-full w-full object-cover image-treatment transition duration-500 group-hover:scale-[1.035]"
+                  alt={creation.alt}
+                  fill
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  quality={72}
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-cover image-treatment transition duration-500 group-hover:scale-[1.025]"
                 />
-              </div>
-              <div className="flex items-end justify-between gap-4 p-5">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{creation.event}</p>
-                  <h3 className="mt-2 font-elegant text-3xl font-bold text-ink">{creation.title}</h3>
+                <div className="absolute left-4 top-4 rounded-full bg-ivory/90 px-3 py-2 text-xs font-extrabold uppercase tracking-[0.12em] text-ink">
+                  {creation.category}
                 </div>
-                <p className="text-right text-sm font-semibold text-charcoal/72">{creation.price}</p>
               </div>
-            </motion.article>
+              <div className="grid gap-4 p-5 sm:grid-cols-[1fr_auto] sm:items-end">
+                <div>
+                  <h3 className="editorial text-4xl font-bold leading-none">{creation.title}</h3>
+                  <p className="mt-3 text-sm font-bold text-gold">{creation.price}</p>
+                </div>
+                <a
+                  href={siteConfig.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="premium-button min-h-[46px] border border-ink/14 text-ink"
+                >
+                  Commander
+                </a>
+              </div>
+            </article>
           ))}
         </div>
       </div>
