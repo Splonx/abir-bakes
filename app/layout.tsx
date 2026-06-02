@@ -3,7 +3,12 @@ import { siteConfig } from '../lib/siteConfig';
 
 export const metadata = {
   title: siteConfig.title,
-  description: siteConfig.description
+  description: siteConfig.description,
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    type: 'website'
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,10 +18,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="bg-cream text-chocolate antialiased">
+      <body className="bg-ivory text-ink antialiased">
         {children}
       </body>
     </html>

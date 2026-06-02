@@ -1,17 +1,17 @@
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
 import About from '../components/About';
-import Gallery from '../components/Gallery';
-import Services from '../components/Services';
-import Order from '../components/Order';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Gallery from '../components/Gallery';
+import Hero from '../components/Hero';
+import Navbar from '../components/Navbar';
+import Order from '../components/Order';
+import Services from '../components/Services';
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="container mx-auto px-6 py-10">
+      <main>
         <Hero />
         <About />
         <Gallery />

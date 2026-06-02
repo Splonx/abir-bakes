@@ -1,42 +1,49 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { featuredCreations } from '../lib/content';
 
-const items = [
-  { title: 'Vanilla Cake', img: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&q=80&auto=format&fit=crop', category: 'Cakes' },
-  { title: 'Chocolate Drip', img: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800&q=80&auto=format&fit=crop', category: 'Cakes' },
-  { title: 'Rose Cupcakes', img: 'https://images.unsplash.com/photo-1551024709-8f23befc6df5?w=800&q=80&auto=format&fit=crop', category: 'Cupcakes' },
-  { title: 'Mini Tartlets', img: 'https://images.unsplash.com/photo-1505253216967-9a9cdd8c6aa0?w=800&q=80&auto=format&fit=crop', category: 'Dessert Boxes' },
-  { title: 'Dessert Box', img: 'https://images.unsplash.com/photo-1542838132-92c53300491e?w=800&q=80&auto=format&fit=crop', category: 'Dessert Boxes' },
-  { title: 'Savory Bites', img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=80&auto=format&fit=crop', category: 'Savory Bites' },
-  { title: 'Birthday Special', img: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=800&q=80&auto=format&fit=crop', category: 'Birthday cakes' },
-  { title: 'Cupcake Box', img: 'https://images.unsplash.com/photo-1517292987719-0369a794ec0f?w=800&q=80&auto=format&fit=crop', category: 'Cupcakes' }
-];
-
-export default function Gallery(){
+export default function Gallery() {
   return (
-    <section id="gallery" className="my-12">
-      <div className="flex flex-col gap-3">
-        <h2 className="section-title">Gallery</h2>
-        <p className="text-chocolate/80">A selection of creations — cakes, cupcakes, dessert boxes and savory bites.</p>
-      </div>
-      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {items.map((it, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: idx * 0.05 }}
-            className="card overflow-hidden"
-          >
-            <img src={it.img} alt={it.title} className="w-full h-48 object-cover" />
-            <div className="p-4">
-              <h3 className="font-medium">{it.title}</h3>
-              <p className="text-sm text-chocolate/70">{it.category}</p>
-            </div>
-          </motion.div>
-        ))}
+    <section id="creations" className="bg-porcelain py-20 sm:py-28">
+      <div className="site-shell">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <p className="eyebrow">Creations signature</p>
+            <h2 className="section-heading mt-4 text-ink">Un catalogue pense par evenement.</h2>
+          </div>
+          <p className="max-w-md leading-7 text-charcoal/70">
+            Chaque creation devient une entree vers un parcours: inspiration, brief, prix estime, production et souvenir partageable.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {featuredCreations.map((creation, index) => (
+            <motion.article
+              key={creation.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.55, delay: index * 0.06 }}
+              className="group overflow-hidden border border-ink/10 bg-ivory"
+            >
+              <div className="aspect-[1.25] overflow-hidden">
+                <img
+                  src={creation.image}
+                  alt={creation.title}
+                  className="h-full w-full object-cover image-treatment transition duration-500 group-hover:scale-[1.035]"
+                />
+              </div>
+              <div className="flex items-end justify-between gap-4 p-5">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold">{creation.event}</p>
+                  <h3 className="mt-2 font-elegant text-3xl font-bold text-ink">{creation.title}</h3>
+                </div>
+                <p className="text-right text-sm font-semibold text-charcoal/72">{creation.price}</p>
+              </div>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </section>
   );
