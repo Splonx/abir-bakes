@@ -9,7 +9,7 @@ export default function Footer() {
             <div>
               <p className="editorial text-4xl font-bold leading-none">{siteConfig.name}</p>
               <p className="mt-3 max-w-md text-sm leading-7 text-cocoa/66">
-                Pieces sur mesure, textures fines et compositions preparees sur reservation.
+                Pieces patissieres sur mesure, finitions sensibles et compositions preparees sur reservation.
               </p>
             </div>
             <div className="grid gap-3 text-sm font-bold text-cocoa/72 sm:text-right">

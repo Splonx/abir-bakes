@@ -6,10 +6,10 @@ import { categories, featuredCreations } from '../lib/content';
 import { siteConfig } from '../lib/siteConfig';
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState('Tous');
+  const [activeCategory, setActiveCategory] = useState('Toutes');
 
   const creations = useMemo(() => {
-    if (activeCategory === 'Tous') {
+    if (activeCategory === 'Toutes') {
       return featuredCreations;
     }
 
@@ -21,11 +21,11 @@ export default function Gallery() {
       <div className="site-shell">
         <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="eyebrow">Editions</p>
-            <h2 className="section-heading mt-4">La piece avant tout.</h2>
+            <p className="eyebrow">Creations</p>
+            <h2 className="section-heading mt-4">Des signatures a adapter a votre moment.</h2>
           </div>
           <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-primary text-warm sm:inline-flex">
-            Demander un devis
+            Demander une proposition
           </a>
         </div>
 
@@ -77,7 +77,7 @@ export default function Gallery() {
                   rel="noreferrer"
                   className="premium-button min-h-[46px] border border-primary/18 text-primary"
                 >
-                  Devis
+                  Proposer mon brief
                 </a>
               </div>
             </article>

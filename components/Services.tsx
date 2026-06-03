@@ -8,7 +8,7 @@ export default function Services() {
       <div className="site-shell">
         <div className="max-w-2xl">
           <p className="eyebrow text-primary">Matieres</p>
-          <h2 className="section-heading mt-4 text-cocoa">Textures, lignes, finitions.</h2>
+          <h2 className="section-heading mt-4 text-cocoa">Creme, ivoire, cacao: le detail donne le ton.</h2>
         </div>
 
         <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
@@ -34,10 +34,10 @@ export default function Services() {
 
         <div className="mt-8 flex flex-col gap-3 border-t border-cocoa/14 pt-7 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm leading-7 text-cocoa/68">
-            Le visuel reste central: creme, cocoa, ivoire, reliefs et finitions doivent parler avant le discours.
+            Le regard doit comprendre avant les mots: reliefs nets, couleurs calmes, finitions choisies et une presence qui reste.
           </p>
           <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="premium-button border border-cocoa/18 bg-warm/34 text-cocoa">
-            Voir Instagram
+            Voir l univers Instagram
           </a>
         </div>
       </div>

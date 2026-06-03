@@ -9,7 +9,7 @@ export default function Navbar() {
           <Link href="/" className="min-w-0" aria-label="Abir Bakes accueil">
             <span className="block truncate font-elegant text-[1.72rem] font-bold leading-none">Abir Bakes</span>
             <span className="mt-1 block text-[0.55rem] font-extrabold uppercase tracking-[0.18em] text-primary">
-              Atelier contemporain
+              {siteConfig.slogan}
             </span>
           </Link>
 

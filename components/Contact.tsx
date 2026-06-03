@@ -8,9 +8,9 @@ export default function Contact() {
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-start">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2 className="section-heading mt-4">Preciser une intention.</h2>
+            <h2 className="section-heading mt-4">Votre moment commence par quelques mots.</h2>
             <p className="body-copy mt-5 max-w-lg">
-              Envoyez le contexte, une reference et la date souhaitee. Abir affine la proposition et la disponibilite.
+              Partagez la date, le lieu, l ambiance souhaitee et une reference visuelle. Abir confirme la disponibilite puis dessine la proposition.
             </p>
 
             <div className="mt-8 grid gap-3 sm:flex sm:flex-wrap">
@@ -24,7 +24,7 @@ export default function Contact() {
           </div>
 
           <div className="soft-panel p-5 sm:p-7">
-            <h3 className="editorial text-4xl font-bold leading-none">Brief parfait</h3>
+            <h3 className="editorial text-4xl font-bold leading-none">Brief ideal</h3>
             <div className="mt-6 grid grid-cols-2 gap-2">
               {briefFields.map((field) => (
                 <div key={field} className="rounded-[1rem] border border-cocoa/10 bg-warm px-4 py-3 text-sm font-bold text-charcoal/74">
@@ -37,10 +37,10 @@ export default function Contact() {
                 <strong className="text-ink">Localisation:</strong> Maroc
               </p>
               <p>
-                <strong className="text-ink">Horaires:</strong> commandes sur reservation
+                <strong className="text-ink">Commandes:</strong> uniquement sur reservation
               </p>
               <p>
-                <strong className="text-ink">Delai conseille:</strong> 48h minimum
+                <strong className="text-ink">Delai conseille:</strong> 48h minimum, plus pour les pieces ceremonie
               </p>
             </div>
           </div>

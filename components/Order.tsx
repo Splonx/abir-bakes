@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { siteConfig } from '../lib/siteConfig';
 
-const occasions = ['Celebration', 'Ceremony', 'Reception', 'Maison'];
+const occasions = ['Signature', 'Ceremonie', 'Reception', 'Maison'];
 const portions = [
   { label: '8 parts', price: 420 },
   { label: '16 parts', price: 680 },
@@ -11,7 +11,7 @@ const portions = [
 ];
 const finishes = [
   { label: 'Pure', price: 120 },
-  { label: 'Botanical', price: 260 },
+  { label: 'Botanique', price: 260 },
   { label: 'Signature', price: 420 }
 ];
 
@@ -25,7 +25,7 @@ export default function Order() {
   }, [finishIndex, portionIndex]);
 
   const message = encodeURIComponent(
-    `Bonjour Abir Bakes, je veux un devis pour: ${occasion}, ${portions[portionIndex].label}, finition ${finishes[finishIndex].label}. Budget indicatif ${estimate} MAD.`
+    `Bonjour Abir Bakes, je souhaite une proposition pour: ${occasion}, ${portions[portionIndex].label}, finition ${finishes[finishIndex].label}. Budget indicatif ${estimate} MAD.`
   );
 
   return (
@@ -33,10 +33,10 @@ export default function Order() {
       <div className="site-shell">
         <div className="grid gap-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-start">
           <div className="lg:sticky lg:top-32">
-            <p className="eyebrow">Devis</p>
-            <h2 className="section-heading mt-4">Un brief clair, une piece juste.</h2>
+            <p className="eyebrow">Commande</p>
+            <h2 className="section-heading mt-4">Quelques choix pour ouvrir la creation.</h2>
             <p className="body-copy mt-5 max-w-md">
-              Le parcours reste volontairement simple: contexte, format, finition. Le reste se precise avec l atelier.
+              Ce premier brief donne le cadre. Abir affine ensuite les saveurs, les proportions et les details selon votre moment.
             </p>
           </div>
 
@@ -45,19 +45,19 @@ export default function Order() {
               <div className="flex items-center justify-between gap-4">
                 <div>
                   <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Progression</p>
-                  <p className="mt-2 text-sm text-cocoa/66">Brief rapide pret a envoyer</p>
+                  <p className="mt-2 text-sm text-cocoa/66">Estimation indicative avant echange</p>
                 </div>
                 <p className="editorial text-4xl font-bold text-primary">{estimate} MAD</p>
               </div>
               <div className="mt-5 grid grid-cols-3 gap-2">
-                {['Evenement', 'Format', 'Finition'].map((step) => (
+                {['Moment', 'Format', 'Finition'].map((step) => (
                   <div key={step} className="h-1 rounded-full bg-primary" aria-label={step} />
                 ))}
               </div>
             </div>
 
             <div className="space-y-8 p-5 sm:p-7">
-              <ChoiceGroup title="Evenement" items={occasions} activeItem={occasion} onSelect={setOccasion} />
+              <ChoiceGroup title="Moment" items={occasions} activeItem={occasion} onSelect={setOccasion} />
               <ChoiceGroup
                 title="Portions"
                 items={portions.map((portion) => portion.label)}
@@ -72,9 +72,9 @@ export default function Order() {
               />
 
               <div className="rounded-[1.25rem] border border-cocoa/10 bg-cashmere/70 p-5">
-                <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">A ajouter dans WhatsApp</p>
+                <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">A glisser dans WhatsApp</p>
                 <p className="mt-3 text-sm leading-7 text-charcoal/72">
-                  Date, lieu, reference visuelle, inscription souhaitee et contraintes de remise.
+                  Date, lieu, inspiration visuelle, inscription souhaitee et contraintes de remise.
                 </p>
               </div>
 
@@ -84,7 +84,7 @@ export default function Order() {
                 rel="noreferrer"
                 className="premium-button w-full bg-primary text-warm"
               >
-                Envoyer le brief
+                Envoyer ma demande
               </a>
             </div>
           </div>

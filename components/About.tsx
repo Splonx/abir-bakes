@@ -7,10 +7,10 @@ export default function About() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
             <p className="eyebrow">Approche</p>
-            <h2 className="section-heading mt-4">Une creation pensee comme un objet de detail.</h2>
+            <h2 className="section-heading mt-4">Une piece pensee avant d etre patissee.</h2>
           </div>
           <p className="body-copy max-w-xl lg:ml-auto">
-            Abir Bakes travaille la texture, la couleur et la finition avec une intention claire: une piece juste, lisible, memorisable.
+            Abir Bakes travaille chaque commande comme une composition: juste dans le gout, lisible dans la forme, elegante dans le souvenir.
           </p>
         </div>
 
