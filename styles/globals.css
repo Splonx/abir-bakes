@@ -14,6 +14,10 @@
   --dusty: #b9948f;
   --bronze: #a77a45;
   --gold: #c5a56b;
+  --primary: #800020;
+  --primary-dark: #5c0017;
+  --primary-light: #a3334d;
+  --primary-soft: #f8f3f4;
   --ink: #4a3428;
   --charcoal: #5c4c43;
 }
@@ -30,7 +34,7 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background:
-    radial-gradient(circle at 18% 0%, rgba(216, 194, 179, 0.32), transparent 34%),
+    radial-gradient(circle at 18% 0%, rgba(163, 51, 77, 0.13), transparent 34%),
     linear-gradient(180deg, rgba(255, 253, 248, 0.94), rgba(251, 247, 239, 1) 40%),
     var(--ivory);
   color: var(--ink);
@@ -42,8 +46,8 @@ img {
 }
 
 ::selection {
-  background: var(--gold);
-  color: var(--ink);
+  background: var(--primary);
+  color: var(--warm);
 }
 
 a,
@@ -51,7 +55,7 @@ button,
 input,
 select,
 textarea {
-  outline-color: var(--gold);
+  outline-color: var(--primary);
 }
 
 .site-shell {
@@ -94,13 +98,13 @@ textarea {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 78% 18%, rgba(197, 165, 107, 0.18), transparent 34%),
+    radial-gradient(circle at 78% 18%, rgba(128, 0, 32, 0.12), transparent 34%),
     radial-gradient(circle at 18% 72%, rgba(216, 194, 179, 0.22), transparent 36%);
   pointer-events: none;
 }
 
 .eyebrow {
-  color: var(--gold);
+  color: var(--primary);
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.16em;

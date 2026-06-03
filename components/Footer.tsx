@@ -13,10 +13,10 @@ export default function Footer() {
               </p>
             </div>
             <div className="grid gap-3 text-sm font-bold text-cocoa/72 sm:text-right">
-              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-gold">
+              <a href={siteConfig.instagram} target="_blank" rel="noreferrer" className="hover:text-primary">
                 Instagram
               </a>
-              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-gold">
+              <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="hover:text-primary">
                 WhatsApp
               </a>
               <span>Maroc · Sur reservation</span>
@@ -29,11 +29,11 @@ export default function Footer() {
       </footer>
 
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-cocoa/10 bg-warm/94 p-3 shadow-[0_-18px_50px_rgba(185,159,130,0.18)] backdrop-blur-xl sm:hidden">
-        <div className="grid grid-cols-[1fr_auto] gap-2">
-          <a href="#creations" className="premium-button min-h-[48px] border border-cocoa/12 text-cocoa">
+        <div className="grid grid-cols-2 gap-2">
+          <a href="#creations" className="premium-button min-h-[48px] min-w-0 border border-cocoa/12 px-3 text-cocoa">
             Creations
           </a>
-          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button min-h-[48px] bg-gold px-5 text-cocoa">
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button min-h-[48px] min-w-0 bg-primary px-3 text-warm">
             WhatsApp
           </a>
         </div>

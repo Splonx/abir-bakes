@@ -41,17 +41,17 @@ export default function Order() {
           </div>
 
           <div className="soft-panel overflow-hidden">
-            <div className="bg-[linear-gradient(135deg,#EEE3D4,#D8C2B3_58%,rgba(197,165,107,0.52))] p-5 text-cocoa sm:p-7">
+            <div className="bg-[linear-gradient(135deg,#F8F3F4,#EEE3D4_58%,rgba(163,51,77,0.18))] p-5 text-cocoa sm:p-7">
               <div className="flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-gold">Progression</p>
+                  <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-primary">Progression</p>
                   <p className="mt-2 text-sm text-cocoa/66">Brief rapide pret a envoyer</p>
                 </div>
-                <p className="editorial text-4xl font-bold text-gold">{estimate} MAD</p>
+                <p className="editorial text-4xl font-bold text-primary">{estimate} MAD</p>
               </div>
               <div className="mt-5 grid grid-cols-3 gap-2">
                 {['Evenement', 'Format', 'Finition'].map((step) => (
-                  <div key={step} className="h-1 rounded-full bg-gold" aria-label={step} />
+                  <div key={step} className="h-1 rounded-full bg-primary" aria-label={step} />
                 ))}
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Order() {
               />
 
               <div className="rounded-[1.25rem] border border-cocoa/10 bg-cashmere/70 p-5">
-                <p className="text-sm font-bold uppercase tracking-[0.14em] text-bronze">A ajouter dans WhatsApp</p>
+                <p className="text-sm font-bold uppercase tracking-[0.14em] text-primary">A ajouter dans WhatsApp</p>
                 <p className="mt-3 text-sm leading-7 text-charcoal/72">
                   Date, lieu, reference visuelle, inscription souhaitee et contraintes de remise.
                 </p>
@@ -82,7 +82,7 @@ export default function Order() {
                 href={`${siteConfig.whatsapp}?text=${message}`}
                 target="_blank"
                 rel="noreferrer"
-                className="premium-button w-full bg-gold text-cocoa"
+                className="premium-button w-full bg-primary text-warm"
               >
                 Envoyer le brief
               </a>
@@ -118,8 +118,8 @@ function ChoiceGroup({
               onClick={() => onSelect(item)}
               className={`min-h-[58px] rounded-[1.15rem] border px-4 py-3 text-left text-sm font-extrabold transition ${
                 isActive
-                  ? 'border-gold bg-gold/70 text-cocoa shadow-[0_12px_32px_rgba(185,159,130,0.2)]'
-                  : 'border-cocoa/10 bg-warm text-charcoal/72 hover:border-bronze'
+                  ? 'border-primary bg-primary text-warm shadow-[0_12px_32px_rgba(128,0,32,0.16)]'
+                  : 'border-cocoa/10 bg-warm text-charcoal/72 hover:border-primaryLight'
               }`}
             >
               {item}

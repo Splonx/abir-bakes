@@ -7,7 +7,7 @@ export default function Services() {
     <section className="section-pad bg-[linear-gradient(180deg,#EEE3D4,#D8C2B3_62%,#FBF7EF)] text-cocoa">
       <div className="site-shell">
         <div className="max-w-2xl">
-          <p className="eyebrow text-gold">Matieres</p>
+          <p className="eyebrow text-primary">Matieres</p>
           <h2 className="section-heading mt-4 text-cocoa">Textures, lignes, finitions.</h2>
         </div>
 

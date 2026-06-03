@@ -20,6 +20,10 @@ module.exports = {
         dusty: '#B9948F',
         bronze: '#A77A45',
         gold: '#C5A56B',
+        primary: '#800020',
+        primaryDark: '#5C0017',
+        primaryLight: '#A3334D',
+        primarySoft: '#F8F3F4',
         ink: '#4A3428',
         charcoal: '#5C4C43'
       },

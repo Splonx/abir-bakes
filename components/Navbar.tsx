@@ -8,7 +8,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between gap-3">
           <Link href="/" className="min-w-0" aria-label="Abir Bakes accueil">
             <span className="block truncate font-elegant text-[1.72rem] font-bold leading-none">Abir Bakes</span>
-            <span className="mt-1 block text-[0.55rem] font-extrabold uppercase tracking-[0.18em] text-gold">
+            <span className="mt-1 block text-[0.55rem] font-extrabold uppercase tracking-[0.18em] text-primary">
               Atelier contemporain
             </span>
           </Link>
@@ -17,7 +17,7 @@ export default function Navbar() {
             href={siteConfig.whatsapp}
             target="_blank"
             rel="noreferrer"
-            className="premium-button min-h-[44px] shrink-0 bg-gold px-4 text-xs text-ink sm:min-h-[50px] sm:px-5 sm:text-sm"
+            className="premium-button min-h-[44px] shrink-0 bg-primary px-3 text-[0.7rem] text-warm sm:min-h-[50px] sm:px-5 sm:text-sm"
           >
             WhatsApp
           </a>
@@ -28,7 +28,7 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 rounded-full border border-cocoa/10 bg-ivory/50 px-3 py-2 text-xs font-bold text-taupe transition hover:border-bronze/50 hover:text-cocoa"
+              className="shrink-0 rounded-full border border-cocoa/10 bg-ivory/50 px-3 py-2 text-xs font-bold text-taupe transition hover:border-primary/40 hover:text-primary"
             >
               {item.label}
             </a>

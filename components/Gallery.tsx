@@ -24,7 +24,7 @@ export default function Gallery() {
             <p className="eyebrow">Editions</p>
             <h2 className="section-heading mt-4">La piece avant tout.</h2>
           </div>
-          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-gold text-cocoa sm:inline-flex">
+          <a href={siteConfig.whatsapp} target="_blank" rel="noreferrer" className="premium-button hidden bg-primary text-warm sm:inline-flex">
             Demander un devis
           </a>
         </div>
@@ -39,8 +39,8 @@ export default function Gallery() {
                 onClick={() => setActiveCategory(category)}
                 className={`shrink-0 rounded-full border px-4 py-2 text-sm font-bold transition ${
                   isActive
-                    ? 'border-gold bg-gold/70 text-cocoa'
-                    : 'border-ink/12 bg-warm text-charcoal/70 hover:border-bronze'
+                    ? 'border-primary bg-primary text-warm'
+                    : 'border-ink/12 bg-warm text-charcoal/70 hover:border-primaryLight'
                 }`}
               >
                 {category}
@@ -69,13 +69,13 @@ export default function Gallery() {
               <div className="grid gap-4 p-5 sm:grid-cols-[1fr_auto] sm:items-end">
                 <div>
                   <h3 className="editorial text-4xl font-bold leading-none">{creation.title}</h3>
-                  <p className="mt-3 text-sm font-bold text-bronze">{creation.price}</p>
+                  <p className="mt-3 text-sm font-bold text-primary">{creation.price}</p>
                 </div>
                 <a
                   href={siteConfig.whatsapp}
                   target="_blank"
                   rel="noreferrer"
-                  className="premium-button min-h-[46px] border border-cocoa/16 text-cocoa"
+                  className="premium-button min-h-[46px] border border-primary/18 text-primary"
                 >
                   Devis
                 </a>
